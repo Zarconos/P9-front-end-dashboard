@@ -6,6 +6,7 @@ import {
   PolarAngleAxis,
   PolarRadiusAxis,
   ResponsiveContainer,
+  Tooltip,
 } from 'recharts';
 
 const UserRadarChart = ({ performanceData }) => {
@@ -17,16 +18,16 @@ const UserRadarChart = ({ performanceData }) => {
   }));
 
   return (
-    <ResponsiveContainer width="100%" height={400}>
-      <RadarChart outerRadius={150} data={radarData}>
-        <PolarGrid />
-        <PolarAngleAxis dataKey="category" />
-        <PolarRadiusAxis />
+    <ResponsiveContainer width={258} height={263}>
+      <RadarChart outerRadius={90} data={radarData} style={{ background: '#282D30', borderRadius: '5px', boxShadow: '0px 2px 4px 0px rgba(0, 0, 0, 0.02)' }}>
+        <PolarGrid  />
+        <PolarAngleAxis dataKey="category" tick={{ fill: 'white', fontSize: 12 }} axisLine={{ stroke: 'white' }} />
+        <PolarRadiusAxis display="none" />
         <Radar
           name="Performance"
           dataKey="value"
-          fill="rgba(136, 132, 216, 0.6)"
-          fillOpacity={0.8}
+          fill="red"
+          fillOpacity={0.7}
         />
       </RadarChart>
     </ResponsiveContainer>

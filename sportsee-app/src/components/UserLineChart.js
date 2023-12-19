@@ -6,23 +6,24 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
 } from 'recharts';
 
 const UserLineChart = ({ averageSessionsData }) => {
+  const days = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
+
   return (
-    <ResponsiveContainer width="100%" height={400}>
-      <LineChart data={averageSessionsData.sessions}>
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="day" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
+    <ResponsiveContainer width={258} height={263}>
+      <LineChart data={averageSessionsData.sessions} style={{ background: 'red', borderRadius: '5px', }}margin={{ left: -55, top: 50, }}>
+        <CartesianGrid strokeDasharray="3 3" stroke={{ display: 'none' }} />
+        <XAxis dataKey="day" tick={{ fill: 'white' }} axisLine={{ stroke: 'none' }} tickLine={{ stroke: 'none' }} tickFormatter={(value) => days[value - 1]}/>
+        <YAxis tick={{ display: 'none' }} axisLine={{ stroke: 'none' }} tickLine={{ stroke: 'none' }} />
+        <Tooltip labelStyle={{ display: 'none' }}
+        itemStyle={{ color: 'black' }} formatter={(value) => [`${value} min`]}/>
         <Line
           type="monotone"
           dataKey="sessionLength"
-          stroke="rgba(136, 132, 216, 1)"
+          stroke="white"
           strokeWidth={2}
           name="Durée de session (minutes)"
         />
@@ -32,3 +33,4 @@ const UserLineChart = ({ averageSessionsData }) => {
 };
 
 export default UserLineChart;
+

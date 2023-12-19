@@ -1,0 +1,9 @@
+.recharts-tooltip-item-separator{
+    display: none;
+}
+
+.recharts-tooltip-item-unit::after{
+
+        content: "KCal";
+
+}

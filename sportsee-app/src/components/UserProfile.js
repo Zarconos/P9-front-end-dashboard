@@ -41,7 +41,7 @@ const UserProfile = ({ userId }) => {
       {userPerformance && <UserRadarChart performanceData={userPerformance} />}
 
         
-
+      
       <h3>Sessions Moyennes (Line Chart)</h3>
       {userAverageSessions && <UserLineChart averageSessionsData={userAverageSessions} />}
 
