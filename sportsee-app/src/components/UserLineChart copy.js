@@ -8,11 +8,10 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts';
-import "../style/Style.css"
 
-const UserLineChart = ({ userData }) => {
+const UserLineChart = ({ averageSessionsData }) => {
   // Vérifier si averageSessionsData et averageSessionsData.sessions sont définis
-  if (!userData || !userData.data.sessions) {
+  if (!averageSessionsData || !averageSessionsData.sessions) {
     // Vous pouvez afficher un message d'erreur ou un indicateur de chargement ici
     return <div>Données non disponibles</div>;
   }
@@ -20,7 +19,7 @@ const UserLineChart = ({ userData }) => {
 
   return (
     <ResponsiveContainer width={258} height={263}>
-      <LineChart data={userData.data.sessions} style={{ background: 'red', borderRadius: '5px', }}margin={{ left: -55, top: 50, }}>
+      <LineChart data={averageSessionsData.sessions} style={{ background: 'red', borderRadius: '5px', }}margin={{ left: -55, top: 50, }}>
         <CartesianGrid strokeDasharray="3 3" stroke={{ display: 'none' }} />
         <XAxis dataKey="day" tick={{ fill: 'white' }} axisLine={{ stroke: 'none' }} tickLine={{ stroke: 'none' }} tickFormatter={(value) => days[value - 1]}/>
         <YAxis tick={{ display: 'none' }} axisLine={{ stroke: 'none' }} tickLine={{ stroke: 'none' }} />

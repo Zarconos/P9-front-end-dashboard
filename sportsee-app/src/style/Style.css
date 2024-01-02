@@ -1,0 +1,82 @@
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+#nutrition{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 1000px;
+    width: 300px;
+}
+
+#main {
+    display: flex;
+  }
+  
+  #top{
+    margin-bottom: -574px;
+  }
+
+  #content {
+    margin-left: 20%;
+  }
+  
+  #title {
+    margin-left: 20px;
+  }
+
+  
+  .recharts-responsive-container {
+    width: 258px;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+  #bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /* Add more specific styles based on your actual chart elements */
+  
+  /* Example for the bar chart */
+  .bar-chart {
+    width: 60%; /* Adjust as needed */
+    height: 300px; /* Adjust as needed */
+  }
+  
+  /* Example for the legend */
+  .recharts-legend-wrapper {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0;
+    bottom: 0;
+  }
+  
+  /* Example for the tooltip */
+  .recharts-tooltip-wrapper {
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+  
+  /* Example for the "Sélectionner un utilisateur" section */
+  .selection-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+
+  #User_Select {
+    position: relative;
+    top: -948px;
+    left: 900px;
+  }

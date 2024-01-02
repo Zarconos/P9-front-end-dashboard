@@ -1,17 +1,12 @@
 import React from "react";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
-import "../style/Style.css"
 
-const UserScoreChart = ({ userData }) => {
-  // Vérifier si userData.data.todayScore ou userData.data.score est défini
-  if (!userData || (!userData.data.todayScore && !userData.data.score)) {
+const UserScoreChart = ({ score }) => {
+  // Vérifier si le score est défini
+  if (score === undefined || score === null) {
     // Vous pouvez afficher un message d'erreur ou un indicateur de chargement ici
-    return <div>Données non disponibles</div>;
+    return <div>Score non disponible</div>;
   }
-
-  // Utilisez la propriété qui est définie, en donnant la priorité à todayScore
-  const score = userData.data.todayScore || userData.data.score;
-
   const normalizedScore = Math.max(0, Math.min(score * 100, 100));  // Conversion en pourcentage
   const rest = 100 - normalizedScore;
 
@@ -23,7 +18,7 @@ const UserScoreChart = ({ userData }) => {
   const COLORS = ['#ff0000', '#ffffff']; // Couleur pourcentage et couleur reste
 
   return (
-    <ResponsiveContainer width={258} height={400}>
+    <ResponsiveContainer width="100%" height={400}>
       <PieChart>
         <Pie
           data={data}
@@ -48,17 +43,7 @@ const UserScoreChart = ({ userData }) => {
           fill={COLORS[0]} // Couleur du pourcentage
           fontSize="20"
         >
-           {`${parseFloat(normalizedScore.toFixed(2))}%`}
-        </text>
-        <text
-          x="50%"
-          y="60%"
-          dy={8}
-          textAnchor="middle"
-          fill={COLORS[0]} // Couleur du pourcentage
-          fontSize="20"
-        >
-           {`de votre objectif`}
+           {`${parseFloat(normalizedScore.toFixed(2))}% de votre objectif`}
         </text>
       </PieChart>
     </ResponsiveContainer>

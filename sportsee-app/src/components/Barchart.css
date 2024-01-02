@@ -2,3 +2,19 @@
     display: none;
 }
 
+.recharts-responsive-container{
+    margin-top: -540px;
+}
+
+.recharts-default-legend{
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    position: relative;
+    bottom: 269px;
+    left: 190px;
+}
+
+.recharts-legend-item-text{
+    color: #74798C!important;
+}

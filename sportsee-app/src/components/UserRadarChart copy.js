@@ -1,20 +1,31 @@
 import React from 'react';
-import { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, ResponsiveContainer } from 'recharts';
-import "../style/Style.css"
+import {
+  Radar,
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  PolarRadiusAxis,
+  ResponsiveContainer,
+} from 'recharts';
 
-const UserRadarChart = ({ userData }) => {
-  if (!userData || !userData.data.kind || !userData.data.data) {
-    return <div>Données non disponibles</div>;
+const UserRadarChart = ({ performanceData }) => {
+  if (!performanceData || !Array.isArray(performanceData.data)) {
+    // Add error handling or return a message for missing or invalid data
+    return <div>No valid performance data available</div>;
   }
 
-  const kindData = userData.data.kind;
-  const performanceData = userData.data.data.map(item => ({ category: kindData[item.kind], value: item.value }));
+  const { kind, data } = performanceData;
+
+  const radarData = data.map((item) => ({
+    category: kind[item.kind],
+    value: item.value,
+  }));
 
   return (
     <ResponsiveContainer width={258} height={263}>
       <RadarChart
         outerRadius={90}
-        data={performanceData}
+        data={radarData}
         style={{
           background: '#282D30',
           borderRadius: '5px',
@@ -35,4 +46,3 @@ const UserRadarChart = ({ userData }) => {
 };
 
 export default UserRadarChart;
-

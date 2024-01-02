@@ -1,0 +1,28 @@
+.sidebar {
+    width: 117px;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+  
+  .side-container {
+    margin-bottom: 20px;
+  }
+  
+  .side-container img {
+    width: 50px; /* Ajustez la taille de votre logo selon vos besoins */
+  }
+  
+  .copyright-container {
+    margin-top: auto; /* Place le texte de copyright en bas */
+    transform: rotate(-90deg);
+  }
+  
+  .copyright-text {
+    color: white;
+    font-size: 12px;
+    white-space: nowrap; /* Évite que le texte ne passe à la ligne */
+  }

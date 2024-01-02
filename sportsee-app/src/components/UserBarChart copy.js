@@ -1,7 +1,6 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import "./Barchart.css"
-import "../style/Style.css"
 
 const UserBarChart = ({ userData }) => {
   // Vérifier si userData.sessions est défini
@@ -19,14 +18,11 @@ const UserBarChart = ({ userData }) => {
   const minCalories = Math.min(...caloriesValues);
 
   return (
-    <div className="bar-chart-container"> {/* Ajoutez une classe pour styler le conteneur du graphique */}
-      <h4 className="chart-title">Activité quotidienne</h4> {/* Ajoutez un titre au-dessus à gauche */}
-
-      <ResponsiveContainer width={702} height={250}>
-        <BarChart data={userData.data.sessions}>
+    <ResponsiveContainer width={702} height={145}>
+      <BarChart data={userData.data.sessions}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis tickFormatter={(value) => value + 1} axisLine={{ stroke: 'none' }} tickLine={{ stroke: 'none' }}/>
-        <YAxis dataKey="kilogram" yAxisId="left"orientation="right" type="number" domain={[minWeight - 2, maxWeight + 1]} axisLine={{ stroke: 'none' }} tickLine={{ stroke: 'none' }} />
+        <YAxis dataKey="kilogram" yAxisId="left"orientation="right" type="number" domain={[minWeight - 2, maxWeight + 2]} axisLine={{ stroke: 'none' }} tickLine={{ stroke: 'none' }} />
         <YAxis dataKey="calories" yAxisId="right" orientation="left" domain={[minCalories -100, maxCalories +100]} hide width={0} />
 
         <Tooltip
@@ -42,20 +38,17 @@ const UserBarChart = ({ userData }) => {
           itemStyle={{ color: 'white' }}
           label="" // Cacher le label
           formatter={(value, name) => {
-            if (name === 'Poids (kg)') {
+            if (name === 'kilogram') {
               return [`${value} kg`, '']; // Ajouter un retour à la ligne
-            } else if (name === 'Calories brûlées (kCal)') {
-              return [`${value} kCal`, '']; // Inclure "Calories:" et ajouter un retour à la ligne
+            } else if (name === 'calories') {
+              return [`${value} kg`, '']; // Inclure "Calories:" et ajouter un retour à la ligne
             }
             return [value];
           }}
         />
-        <Legend 
-        iconType="circle" // Utilisez des icônes de cercle pour la légende
-            wrapperStyle={{ color: '#000' }} />
+        <Legend />
         <Bar
           dataKey="kilogram"
-          name="Poids (kg)"
           fill="#000"
           stroke="#000"
           strokeWidth={1}
@@ -77,7 +70,6 @@ const UserBarChart = ({ userData }) => {
         />
       </BarChart>
     </ResponsiveContainer>
-    </div>
   );
 };
 
