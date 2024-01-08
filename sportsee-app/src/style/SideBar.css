@@ -1,28 +1,35 @@
 .sidebar {
     width: 117px;
     height: 100vh;
-    background-color: black;
+    background-color: #020203;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
+    position: fixed;
   }
   
   .side-container {
     margin-bottom: 20px;
   }
   
-  .side-container img {
-    width: 50px; /* Ajustez la taille de votre logo selon vos besoins */
-  }
   
   .copyright-container {
-    margin-top: auto; /* Place le texte de copyright en bas */
+    margin-top: 160px;
     transform: rotate(-90deg);
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
   }
   
   .copyright-text {
     color: white;
     font-size: 12px;
-    white-space: nowrap; /* Évite que le texte ne passe à la ligne */
+    white-space: nowrap; 
+  }
+
+  #sidebar_icon{
+    margin-top: 200px;
   }

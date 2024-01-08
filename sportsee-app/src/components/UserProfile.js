@@ -1,4 +1,4 @@
-// UserProfile.js
+
 import React, { useEffect, useState } from 'react';
 import { getUserInfo, getUserActivity, getUserAverageSessions, getUserPerformance } from '../services/apiService';
 import UserBarChart from './UserBarChart';
@@ -42,8 +42,10 @@ const UserProfile = ({ userId }) => {
           <UserInfo userInfo={userInfo} />
           <UserBarChart userData={userActivity} />
             <div id="bottom">
+              <h1 id="average_session">Durée moyenne des sessions</h1>
           <UserLineChart userData={userAverageSessions} />
           <UserRadarChart userData={userPerformance} />
+              <h1 id="user_score">Score</h1>
           <UserScoreChart userData={userInfo} />
             </div>
         </div>

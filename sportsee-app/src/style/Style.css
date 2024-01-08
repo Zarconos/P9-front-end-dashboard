@@ -5,29 +5,54 @@ body{
 
 
 #nutrition{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    left: 1000px;
-    width: 300px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 1060px;
+  width: 300px;
 }
 
-#main {
-    display: flex;
-  }
   
   #top{
-    margin-bottom: -574px;
+    margin-bottom: -570px;
   }
 
   #content {
     margin-left: 20%;
   }
   
-  #title {
-    margin-left: 20px;
+
+  #title h2{
+    color: black;
+    font-family: Roboto;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
   }
 
+  #title h3{
+    color: #FF0101;
+    font-family: Roboto;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    margin-left: 10px;
+  }
+
+  #title_welcome{
+    display: flex;
+    align-items: center;
+  }
+
+  #catch_phrase{
+    color: #000;
+
+font-family: Roboto;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+margin-top: -30px;
+  }
   
   .recharts-responsive-container {
     width: 258px;
@@ -39,17 +64,16 @@ body{
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    width: 1000px
   }
   
-  /* Add more specific styles based on your actual chart elements */
-  
-  /* Example for the bar chart */
+
   .bar-chart {
-    width: 60%; /* Adjust as needed */
-    height: 300px; /* Adjust as needed */
+    width: 60%;
+    height: 300px; 
   }
   
-  /* Example for the legend */
+
   .recharts-legend-wrapper {
     position: absolute;
     width: 100%;
@@ -58,7 +82,7 @@ body{
     bottom: 0;
   }
   
-  /* Example for the tooltip */
+
   .recharts-tooltip-wrapper {
     visibility: hidden;
     pointer-events: none;
@@ -68,7 +92,7 @@ body{
     transform: translate(0, 0);
   }
   
-  /* Example for the "Sélectionner un utilisateur" section */
+
   .selection-container {
     text-align: center;
     margin-top: 20px;
@@ -77,6 +101,70 @@ body{
 
   #User_Select {
     position: relative;
-    top: -948px;
+    top: -868px;
     left: 900px;
   }
+
+#average_session{
+  color: #FFF;
+font-family: Roboto;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+position: absolute;
+    top: 620px;
+    z-index: 1;
+    width: 140px;
+    margin-left: 20px;
+    opacity: 0.504;
+}
+
+.nutrition_detail{
+  display: flex;
+  margin-top: 70px;
+  align-items: center;
+}
+
+.nutrition_detail img{
+  height: 60px;
+}
+
+.nutrition_data{
+  color: #282D30;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.nutrition_detail_text{
+  margin-left: 24px;
+}
+
+.nutrition_name{
+  color: #74798C;
+font-family: Roboto;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+margin-top: -18px
+}
+
+#user_score{
+  position: absolute;
+  top: 620px;
+  color: #20253A;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  margin-left: 720px;
+}
+
+.red-background {
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  width: 300px;
+}

@@ -2,8 +2,19 @@
     display: none;
 }
 
-.recharts-tooltip-item-unit::after{
+.recharts-responsive-container{
+    margin-top: -540px;
+}
 
-        content: "KCal";
+.recharts-default-legend{
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    position: relative;
+    bottom: 269px;
+    left: 330px;
+}
 
+.recharts-legend-item-text{
+    color: #74798C!important;
 }

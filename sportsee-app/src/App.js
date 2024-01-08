@@ -24,7 +24,7 @@ const App = () => {
           <UserProfile userId={selectedUserId} />
 
         </div>
-        <div id="User_Select">
+        <div id="User_Select" className="red-background">
         <label>Sélectionner un utilisateur :</label>
           <select value={selectedUserId} onChange={(e) => handleUserChange(e.target.value)}>
             <option value="12">Utilisateur 12</option>

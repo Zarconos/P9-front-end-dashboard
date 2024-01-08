@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "../assets/logo.svg"; // Assurez-vous d'importer le chemin correct du logo
+import logo from "../assets/logo.svg";
 
-import "../style/header.css"; // Assurez-vous d'importer le fichier CSS
+import "../style/header.css";
 
 export default function Header() {
     return (

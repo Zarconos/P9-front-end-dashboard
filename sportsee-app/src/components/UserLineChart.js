@@ -11,9 +11,7 @@ import {
 import "../style/Style.css"
 
 const UserLineChart = ({ userData }) => {
-  // Vérifier si averageSessionsData et averageSessionsData.sessions sont définis
   if (!userData || !userData.data.sessions) {
-    // Vous pouvez afficher un message d'erreur ou un indicateur de chargement ici
     return <div>Données non disponibles</div>;
   }
   const days = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
