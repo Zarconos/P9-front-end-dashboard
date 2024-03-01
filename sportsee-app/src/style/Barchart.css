@@ -18,3 +18,17 @@
 .recharts-legend-item-text{
     color: #74798C!important;
 }
+
+
+@media (max-width: 1536px) {
+
+.recharts-legend-wrapper{
+    left: 16%!important;
+    bottom: -30px!important;
+  }
+
+}
+@media (max-width: 990px) {
+.recharts-default-legend {
+    left: -200px!important;
+}}

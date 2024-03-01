@@ -11,6 +11,7 @@ const App = () => {
 
   const handleUserChange = (userId) => {
     setSelectedUserId(Number(userId));
+    // ajouter booleen pour switch data //
   };
 
   return (
@@ -25,7 +26,7 @@ const App = () => {
 
         </div>
         <div id="User_Select" className="red-background">
-        <label>Sélectionner un utilisateur :</label>
+        <label id="User_Select_Tag">Sélectionner un utilisateur :</label>
           <select value={selectedUserId} onChange={(e) => handleUserChange(e.target.value)}>
             <option value="12">Utilisateur 12</option>
             <option value="18">Utilisateur 18</option>

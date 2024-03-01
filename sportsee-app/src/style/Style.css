@@ -168,3 +168,235 @@ margin-top: -18px
   border-radius: 5px;
   width: 300px;
 }
+
+.error_container{
+  display: flex;
+  flex-direction: column;
+  margin-left: 15%;
+  align-items: center;
+  position: absolute;
+  right: 38%;
+  top: 35%;
+}
+
+.error_title{
+  color: red;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+@media (max-width: 1536px) {
+
+.bar-chart-container{
+  width: 0px;
+}
+
+.recharts-responsive-container{
+  max-width: 850px!important;
+  max-height: 400px!important;
+}
+
+.sidebar {
+  width: 97px;
+  height: 100%;
+  background-color: #020203;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0px;
+  position: fixed;
+}
+
+.copyright-container {
+  margin-top: 117px;
+  transform: rotate(-90deg);
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+
+#top {
+  display: flex;
+  margin-bottom: 0px;
+}
+
+#title h2 {
+  color: black;
+  font-family: Roboto;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+#title h3 {
+  color: #FF0101;
+  font-family: Roboto;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+#catch_phrase {
+  color: #000;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: -30px;
+}
+
+#nutrition {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 0%;
+  bottom: -28px;
+  left: -26%;
+  top: 17%;
+}
+
+.nutrition_detail {
+  display: flex;
+  margin-top: 70px;
+  align-items: center;
+  margin-right: 60px;
+}
+
+.nutrition_data{
+  font-size: 15px;
+}
+
+.nutrition_detail img {
+  height: 40px;
+}
+
+.nutrition_name {
+  font-size: 10px;
+}
+
+.chart-title{
+  font-size: 12px;
+  position: relative;
+  top: 30px;
+}
+
+
+
+#bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -40px;
+  width: 100%;
+}
+
+#average_session {
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  position: absolute;
+  top: 492px;
+  z-index: 1;
+  width: 140px;
+  margin-left: 20px;
+  opacity: 0.504;
+}
+
+#user_score {
+  position: absolute;
+  top: 499px;
+  color: #20253A;
+  font-family: Roboto;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  margin-left: 59%;
+}
+
+#User_Select {
+  position: relative;
+  top: -789px!important;
+  left: 80%;
+}
+
+#User_Select_Tag {
+display: none;
+}
+
+.red-background {
+  width: 101px;
+}
+
+#main{
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+#content {
+  margin-left: 15%;
+}
+
+.recharts-default-legend {
+  left: 50px;}
+
+}
+
+.error_container{
+  right: 38%;
+}
+
+@media (max-width: 990px) {
+
+  .recharts-responsive-container {
+    max-width: 550px!important;
+    max-height: 400px!important;
+}
+
+.nutrition_detail {
+  display: flex;
+  margin-top: 70px;
+  align-items: center;
+  margin-right: 36px;
+}
+
+#bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -40px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+#nutrition {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 0%;
+  bottom: -28px;
+  left: -328px;
+  top: 17%;
+}
+
+#User_Select {
+  position: relative;
+  top: -1353px!important;
+  left: 80%;
+}
+
+#user_score {
+display: none;
+}
+
+body {
+  overflow-y: auto;
+}
+
+.error_container{
+  right: 11%;
+}
+
+}
